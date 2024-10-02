@@ -6,12 +6,15 @@ colorschem industry
 filetype plugin on
 autocmd filetype python nnoremap <F9> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype c nnoremap <F9> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' -lm && ./'.shellescape('%:r')<CR>
-autocmd filetype c nnoremap <F7> :w <bar> exec '!makewiz'<CR>:make<CR>:!./main
-autocmd filetype cpp nnoremap <F7> :w <bar> exec '!makewiz'<CR>:make<CR>:!./main
+autocmd filetype c nnoremap <F6> :w <bar> exec '!makewiz'<CR>:make<CR>:!./main<CR>
+autocmd filetype cpp nnoremap <F6> :w <bar> exec '!makewiz'<CR>:make<CR>:!./main<CR>
 autocmd filetype cpp nnoremap <F9> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd filetype cpp nnoremap <F7> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' -lsfml-graphics -lsfml-window -lsfml-system && ./'.shellescape('%:r')<CR>
+nnoremap <F5> :w <bar> :tabn <CR>
+nnoremap <F4> :w <bar> :tabp <CR>
 set relativenumber
-set cursorline 
-set cursorcolumn
+set cursorline
+set cursorcolumn                                                                                                                                 
 set tabstop=4
 call plug#begin()
 Plug 'epheien/termdbg'
@@ -23,4 +26,4 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
-set encoding=utf-8 
+set encoding=utf-8
