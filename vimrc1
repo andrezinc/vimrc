@@ -16,6 +16,7 @@ set relativenumber
 set cursorline
 set cursorcolumn                                                                                                                                 
 set tabstop=4
+set title
 call plug#begin()
 Plug 'epheien/termdbg'
 call plug#end()
