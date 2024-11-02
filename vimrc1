@@ -1,8 +1,13 @@
-set nocompatible
-filetype off
-syntax on
+set nocompatible                                                                                                                                                                                                                                                           
+let g:NERDTreeFileLines = 1 
+set clipboard=unnamed
+set background=dark 
+syntax on  
+let g:gruvbox_italic=1
+filetype plugin indent on    " required
+set laststatus=2
+filetype off 
 filetype on
-colorschem industry
 filetype plugin on
 autocmd filetype python nnoremap <F9> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype c nnoremap <F9> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' -lm && ./'.shellescape('%:r')<CR>
@@ -11,10 +16,13 @@ autocmd filetype cpp nnoremap <F6> :w <bar> exec '!makewiz'<CR>:make<CR>:!./main
 autocmd filetype cpp nnoremap <F9> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F7> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' -lsfml-graphics -lsfml-window -lsfml-system && ./'.shellescape('%:r')<CR>
 nnoremap <F5> :w <bar> :tabn <CR>
-nnoremap <F4> :w <bar> :tabp <CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>nnoremap <F4> :w <bar> :tabp <CR>
 set relativenumber
 set cursorline
-set cursorcolumn                                                                                                                                 
+set cursorcolumn
 set tabstop=4
 set title
 call plug#begin()
@@ -22,9 +30,12 @@ Plug 'epheien/termdbg'
 call plug#end()
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'preservim/nerdtree'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
-filetype plugin indent on    " required
 set encoding=utf-8
+colorscheme gruvbox 
+syntax on
