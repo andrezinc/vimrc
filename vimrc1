@@ -1,4 +1,5 @@
 set nocompatible
+set termguicolors
 let g:NERDTreeFileLines = 1 
 set clipboard=unnamed
 set background=dark 
