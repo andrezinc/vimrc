@@ -52,6 +52,8 @@ syntax on
 "    highlight One ctermfg=15 ctermbg=15 guifg=#ffffff guibg=#ffffff
 "    syntax match Two /2/ 
 "    highlight Two ctermfg=3 ctermbg=3 guifg=#ffff00 guibg=#ffff00
+"    syntax match Three /3/                                          
+"    highlight Three ctermfg=12 ctermbg=1 guifg=#b81414 guibg=#b81414          
 "    syntax match Six /6/ 
 "    highlight Six ctermfg=6 ctermbg=6 guifg=#00ffff guibg=#00ffff
 "endfunction
