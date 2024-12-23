@@ -40,3 +40,19 @@ call vundle#end()            " required
 set encoding=utf-8
 colorscheme gruvbox 
 syntax on
+
+"augroup TxtNumberHighlight
+"    autocmd!
+"    autocmd BufRead,BufNewFile *.txt call HighlightNumbers()
+"augroup END 
+"function! HighlightNumbers()
+"    syntax match Zero /0/ 
+"    highlight Zero ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
+"    syntax match One /1/ 
+"    highlight One ctermfg=15 ctermbg=15 guifg=#ffffff guibg=#ffffff
+"    syntax match Two /2/ 
+"    highlight Two ctermfg=3 ctermbg=3 guifg=#ffff00 guibg=#ffff00
+"    syntax match Six /6/ 
+"    highlight Six ctermfg=6 ctermbg=6 guifg=#00ffff guibg=#00ffff
+"endfunction
+                                                                                                                                                    
